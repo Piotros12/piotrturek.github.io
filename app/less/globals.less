@@ -1,31 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&family=Source+Code+Pro:wght@300;400&display=swap');
 // 'Source Code Pro' 300 400
-// 'Bebas Neue'
+// Raleway 300 500 700 900
 
-html {
-    font-size: 100%;
-    box-sizing: border-box;
-}
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.3; 
-    background-color: @background-color;
-    font-family: 'Source Code Pro', sans-serif;
-    font-weight: 300;
-    color: @code-green;
-}
 
 // * {
 //     border: 1px dotted white;
 // }
 
 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.3; 
+    background-color: @background-color;
+    font-family: @header-font, @second-font;
+    color: @light;
+}
+
+//FONTS
+h1, h2, h3 {
+
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin: 5px 0;
+}
+
+h2 {
+   font-size: 1.2rem;
+   color: @dark;
+}
+
+h3 {
+    
+}
+
+p {
+    font-size: 1rem;
+    &.code {
+        font-family: @code-font, @second-font;
+        font-weight: 300;
+        color: @code-green;
+    }
+}
+//FONTS
 
 .flex {
     display: flex;
@@ -43,5 +74,5 @@ body {
 
 a, a:hover, a:active {
     text-decoration: none;
-    color: @code-green;
+    color: inherit;
 }
