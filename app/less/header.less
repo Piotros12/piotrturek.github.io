@@ -1,0 +1,26 @@
+.header {
+box-shadow: 0 2px 15px black;
+
+    nav {
+        padding: 26px 5%;
+    }
+
+    &__logo {
+        img{
+        width: 40px;
+        }
+    }
+
+    &__menu {
+        span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: @code-green;
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
+        
+    }
+}
