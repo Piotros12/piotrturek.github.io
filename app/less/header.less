@@ -11,6 +11,8 @@ box-shadow: 0px 1px 10px black;
         ol li {
             font-family: 'Source Code Pro';
             color: @light;
+            margin: 20px;
+            align-items: center;
             &::marker {
                 color: @code-green; 
             }
@@ -121,7 +123,14 @@ box-shadow: 0px 1px 10px black;
   }
   
   .navigation__list {
-    margin-top: 100px;
-    margin-left: 50px;
+    margin-top: 120px;
+    margin-left: 60px;
   }
   
+  .header__logo--active img {
+    filter: grayscale(1) brightness(1.5);
+  }
+
+  .header__logo img {
+    transition: filter .3s .1s ease-in-out;
+  }
