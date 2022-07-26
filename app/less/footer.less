@@ -18,10 +18,13 @@ footer {
             }
         }
     }
-    a {
+ 
+    svg {
+        width: 25px;
+        fill: @dark;
         transition: .5s;
-         &:hover {
-            filter: brightness(0) saturate(100%) invert(70%) sepia(84%) saturate(252%) hue-rotate(111deg) brightness(106%) contrast(103%);
+        &:hover {
+            fill: @code-green;
         }
     }
 }
