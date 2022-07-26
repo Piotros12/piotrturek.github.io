@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl-PL" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,19 +17,18 @@
     <meta property=”og:locale” content=”pl_PL” />
     <meta name="theme-color" content="0C0D1C">
 
-    <!-- LESS TO CSS -->
     <link rel="stylesheet/less" type="text/css" href="app/less/style.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
-    <!-- LESS TO CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
     <script src="app/js/script.js"></script>
 </head>
+
+
+
 <body>
-
-
 
     <header class="header">
         <nav class="flex flex-jc-sb flex-a-c">
-            <a href="/" class="header__logo" id="header__logo__click">
+            <a href="#TOP" class="header__logo" id="header__logo__click" onclick="logoClosingMenu()">
                 <img src="images/logo.svg" alt="Piotr Turek" title="Piotr Turek">
             </a>
             <button class="hamburger" id="hamburger__click" onclick="myFunction()">
@@ -39,25 +39,30 @@
 
             <div class="navigation" id="navigation__click">
                 <ol class="navigation__list">
-                    <li><a href="#">O mnie</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#" onclick="myFunction()">O mnie</a></li>
+                    <li><a href="#" onclick="myFunction()">Portfolio</a></li>
+                    <li><a href="#" onclick="myFunction()">Kontakt</a></li>
                 </ol>
             </div>
         </nav>
     </header>
 
     <main>
-    <section id="land">
-        <p class="code">Hello World!</p>
-        <h1>Piotr Turek</h1>
-        <h2>Graphic and website designer</h2>
-        <p>Cześć! Jestem kim jestem i w <strong>ogóle</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, autem recusandae soluta excepturi eos rerum dolor necessitatibus qui <strong>sa distinctio</strong> labore, temporibus deserunt. Est, magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, maxime.</p>
-    </section>
+        <section id="land">
+            <p class="code">Hello World!</p>
+            <h1>Piotr Turek</h1>
+            <h2>Graphic and website designer</h2>
+            <p>Cześć! Mam na imię Piotrek i jestem <strong>freelancerem</strong>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, autem recusandae soluta excepturi eos rerum dolor necessitatibus qui <strong>sa distinctio</strong> labore, temporibus deserunt. Est, magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, maxime.</p>
+        </section>
+
+        <section id="about">
+            <h3>O mnie.</h3>
+        </section>
     </main>
 
     <footer>
 
     </footer>
 </body>
+
 </html>
