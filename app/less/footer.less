@@ -1,0 +1,27 @@
+footer {
+    min-height: 150px;
+    box-shadow: 0px 1px 10px black;
+    padding: 20px;
+    margin-top: 50px;
+    p {
+        text-align: center;
+        font-size: @font-small;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        li {
+            list-style-type: none;
+            img {
+                width: 25px;
+            }
+        }
+    }
+    a {
+        transition: .5s;
+         &:hover {
+            filter: brightness(0) saturate(100%) invert(70%) sepia(84%) saturate(252%) hue-rotate(111deg) brightness(106%) contrast(103%);
+        }
+    }
+}
