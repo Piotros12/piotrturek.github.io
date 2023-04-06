@@ -1,0 +1,41 @@
+main {
+  padding: 0 5%;
+  min-height: 100vh;
+}
+main section {
+  padding-top: 120px;
+}
+main section h2 {
+  padding-bottom: 50px;
+}
+main section strong {
+  color: #64ffda;
+  font-weight: normal;
+}
+main section#contact #contactcontainer {
+  text-align: center;
+}
+main section#contact a {
+  color: #64ffda;
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+  padding: 20px 35px;
+  margin-top: 50px;
+  border: 1px solid #64ffda;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+main section#contact a:hover {
+  background-color: #64ffdb2c;
+}
+main ul {
+  list-style: decimal-leading-zero;
+  padding-left: 80px;
+}
+main ul li {
+  padding-left: 5px;
+}
+main ul li::marker {
+  color: #64ffda;
+}

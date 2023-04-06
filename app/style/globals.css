@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&family=Source+Code+Pro:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.5;
+  background-color: #13152c;
+  font-family: Raleway, sans-serif;
+  color: #fff;
+  counter-reset: section;
+}
+section {
+  min-height: 100vh;
+}
+h1 {
+  font-size: 2.8rem;
+  margin: 5px 0;
+}
+h2 {
+  font-size: 1.2rem;
+  color: #8e99bd;
+  margin-top: -15px;
+}
+h3 {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  list-style: decimal;
+  font-weight: 400;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+h3::before {
+  counter-increment: section;
+  content: "0" counter(section) ".";
+  color: #64ffda;
+  margin-right: 10px;
+}
+p.code {
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 300;
+  color: #64ffda;
+}
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-a-c {
+  align-items: center;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+progress,
+progress::-webkit-progress-bar,
+progress::-webkit-progress-value {
+  border-radius: calc(10px / 2);
+}
+progress {
+  width: 100%;
+  height: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+progress::-webkit-progress-bar {
+  background-color: #080018;
+}
+progress::-webkit-progress-value {
+  background-color: #64ffda;
+}
+h6 {
+  font-family: "Source Code Pro", sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
+.animated-text::after {
+  content: "|";
+  animation: blink 1s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+@keyframes blink {
+  0%,
+  49%,
+  100% {
+    opacity: 0;
+  }
+  50%,
+  99% {
+    opacity: 1;
+  }
+}

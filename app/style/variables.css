@@ -1,0 +1,21 @@
+:root {
+  /* Colors */
+  --background-color: #13152c;
+  --menu-color: #0e1020;
+  --code-green: #64ffda;
+  --white: #fff;
+  --light: #fff;
+  --dark: #8e99bd;
+
+  /* Fonts */
+  --header-font: Raleway;
+  --second-font: sans-serif;
+  --code-font: "Source Code Pro";
+
+  /* Font Sizes */
+  --font-base: 16px;
+  --font-small: 0.8rem;
+  --font-med: 1rem;
+  --font-big: 1.2rem;
+  --font-huge: 2.8rem;
+}
