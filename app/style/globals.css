@@ -114,3 +114,25 @@ h6 {
     opacity: 1;
   }
 }
+
+/* IN PROGRESS */
+#in-progress {
+  height: 100%;
+  width: 100%;
+  background-color: #0000007e;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  font-size: 10vw;
+  text-align: center;
+  color: #64ffdb75;
+  z-index: 5;
+}
+
+#in-progress p {
+  transform: rotate(-10deg);
+}
+/* IN PROGRESS */
