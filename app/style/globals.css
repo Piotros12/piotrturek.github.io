@@ -21,7 +21,7 @@ body {
   counter-reset: section;
 }
 section {
-  min-height: 300px;
+  /* min-height: 400px; */
 }
 h1 {
   font-size: 2.8rem;
@@ -47,6 +47,14 @@ h3::before {
   color: #64ffda;
   margin-right: 10px;
 }
+h4 {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  margin: 15px 0 20px 0;
+  font-weight: 400;
+}
 p.code {
   font-family: "Source Code Pro", sans-serif;
   font-weight: 300;
@@ -70,234 +78,4 @@ a:active,
 a:visited {
   text-decoration: none;
   color: inherit;
-}
-progress,
-progress::-webkit-progress-bar,
-progress::-webkit-progress-value {
-  border-radius: calc(10px / 2);
-}
-progress {
-  width: 100%;
-  height: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
-progress::-webkit-progress-bar {
-  background-color: #080018;
-}
-progress::-webkit-progress-value {
-  background-color: #64ffda;
-}
-h6 {
-  font-family: "Source Code Pro", sans-serif;
-  font-weight: 300;
-  color: white;
-  font-size: 14px;
-  margin-bottom: 3px;
-  margin-left: 10px;
-}
-.animated-text::after {
-  content: "|";
-  animation: blink 1s linear infinite;
-  position: relative;
-  z-index: 1;
-}
-@keyframes blink {
-  0%,
-  49%,
-  100% {
-    opacity: 0;
-  }
-  50%,
-  99% {
-    opacity: 1;
-  }
-}
-
-/* IN PROGRESS */
-#in-progress {
-  height: 100%;
-  width: 100%;
-  background-color: #0000007e;
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  display: grid;
-  place-items: center;
-  font-size: 10vw;
-  text-align: center;
-  color: #64ffdb75;
-  z-index: 5;
-}
-
-#in-progress p {
-  transform: rotate(-10deg);
-}
-/* IN PROGRESS */
-
-/* PORTFOLIO */
-#projects-carusell {
-  position: relative;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-#projects-carusell ul {
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -ms-overflow-style: none; /* HIDE SCROLLBAR IE and Edge */
-  scrollbar-width: none; /* HIDE SCROLLBAR Firefox */
-  scroll-behavior: smooth;
-  list-style-type: none;
-  width: 100%;
-  height: fit-content;
-}
-
-#projects-carusell ul::-webkit-scrollbar {
-  display: none; /* HIDE SCROLLBAR */
-}
-
-#projects-carusell li {
-  scroll-snap-align: center;
-  width: 70%;
-  aspect-ratio: 3 / 2;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: inline-block;
-  vertical-align: top;
-  white-space: normal;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-#projects-carusell li a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  position: relative;
-  transition: 0.3s;
-}
-
-#projects-carusell li img {
-  object-fit: cover;
-  height: 80%;
-  max-width: 100%;
-  transition: 0.3s;
-}
-
-#projects-carusell li:first-child {
-  margin-left: 15%;
-}
-
-#projects-carusell li:last-child {
-  margin-right: 15%;
-}
-
-#projects-carusell .projects-arrow {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  width: 15%;
-  cursor: pointer;
-}
-
-#projects-carusell .projects-arrow img {
-  height: 10%;
-}
-
-#projects-carusell #projects-arrow--left {
-  left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(18, 21, 43, 0.9),
-    rgba(255, 255, 255, 0)
-  );
-}
-
-#projects-carusell #projects-arrow--right {
-  right: 0;
-  background: linear-gradient(
-    270deg,
-    rgba(18, 21, 43, 0.9),
-    rgba(255, 255, 255, 0)
-  );
-}
-
-#projects-carusell .projects-arrow img {
-  width: 100%;
-  opacity: 0.5;
-  transition: 0.3s;
-}
-
-#projects-carusell .stack-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: auto;
-  background-color: rgb(245, 245, 245);
-  height: 20%;
-  transition: 0.3s;
-}
-
-#projects-carusell .stack-container img {
-  height: 50%;
-}
-
-#projects-carusell .live {
-  text-align: center;
-  background-color: rgb(255, 0, 0);
-  position: absolute;
-  font-weight: 700;
-  font-size: 1.8vw;
-  padding: 0.35em 200px;
-  color: white;
-  right: 12%;
-  top: 14%;
-  transform: translateY(-50%) translateX(50%) rotate(45deg);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  z-index: 5;
-}
-
-#projects-carusell .live img {
-  height: 0.7em;
-}
-
-#projects-carusell li a h1 {
-  color: white;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: 0.3s;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 5;
-  font-size: 5vw;
-  text-align: center;
-}
-
-#projects-carusell li:hover h1 {
-  opacity: 1;
-}
-#projects-carusell li:hover img,
-#projects-carusell li:hover .stack-container {
-  filter: brightness(0.5);
-}
-
-#projects-carusell .projects-arrow:hover img {
-  opacity: 1;
 }

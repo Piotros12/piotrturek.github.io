@@ -3,7 +3,7 @@
   background-color: #13152c;
   position: fixed;
   box-shadow: 0px 1px 10px black;
-  z-index: 2;
+  z-index: 100;
 }
 .header nav {
   padding: 20px 5%;
