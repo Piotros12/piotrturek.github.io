@@ -1,0 +1,40 @@
+@import url(/general.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light: hsl(270, 3%, 87%);
+  --color-medium: hsl(279, 6%, 55%);
+  --color-dark: hsl(278, 68%, 11%);
+  --color-red: hsl(0, 100%, 66%);
+  --gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+}
+
+body {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 18px;
+  font-family: "Space Grotesk";
+}
+
+/*
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side {
+  width: 50%;
+  background-color: aqua;
+}
+
+.right-side {
+  background-color: aquamarine;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="card.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="/" class="return">&lt; HOME PAGE</a>
+  </header>
+  <main>
+    .
+    <div class="left-side">
+      <div class="card-front">
+        0000 0000 0000 0000
+        Jane Appleseed
+        00/00
+      </div>
+      <div class="card-back">
+        000
+      </div>
+    </div>
+    <div class="right-side">
+      <form action="">
+        <label for="card__name">Cardholder Name</label>
+        <input id="card__name" type="text" placeholder="e.g. Jane Appleseed">
+        <label for="card__number">Card Number</label>
+        <input id="card__number" type="number" placeholder="e.g. 1234 5678 9123 0000">
+        <label for="card__date">Exp. Date (MM/YY)</label>
+        <input id="card__date" type="number" placeholder="MM">
+        <input id="card__date" type="number" placeholder="YY">
+        <label for="card__cvc">CVC</label>
+        <input id="card__cvc" type="number" placeholder="e.g. 123">
+        <input type="button" value="Confirm">
+      </form>
+      <div class="complete">
+        Thank you!
+        We've added your card details
+        Continue
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://piotr-turek.github.io/" target="_blank" rel="author">Piotr Turek</a>.
+  </div>
+
+  <footer>
+    <span class="copyright">Copyright by
+      <a href="https://piotr-turek.github.io/" target="_blank" rel="author"> Piotr Turek</a>
+    </span>
+  </footer>
+  <script src="card.js"></script>
+</body>
+
+</html>
