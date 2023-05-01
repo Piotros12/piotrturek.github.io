@@ -29,27 +29,53 @@
   </header>
   <main>
     <div class="left-side">
-      <div class="card card-front">
-        0000 0000 0000 0000
-        Jane Appleseed
-        00/00
+      <div class="card card--front">
+        <div class="circles"></div>
+        <span class="card--front__number">0000 0000 0000 0000</span>
+        <span class="card--front__owner">Jane Appleseed</span>
+        <span class="card--front__date">00/00</span>
       </div>
-      <div class="card card-back">
-        000
+      <div class="card card--back">
+        <div class="card--back__line"></div>
+        <div class="card--back__cvc">000</div>
+        <div class="card--back__lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </div>
     </div>
     <div class="right-side">
       <form action="">
-        <label for="card__name">Cardholder Name</label>
-        <input id="card__name" type="text" placeholder="e.g. Jane Appleseed">
-        <label for="card__number">Card Number</label>
-        <input id="card__number" type="number" placeholder="e.g. 1234 5678 9123 0000">
-        <label for="card__date">Exp. Date (MM/YY)</label>
-        <input id="card__date" type="number" placeholder="MM">
-        <input id="card__date" type="number" placeholder="YY">
-        <label for="card__cvc">CVC</label>
-        <input id="card__cvc" type="number" placeholder="e.g. 123">
-        <input type="button" value="Confirm">
+        <div>
+          <label for="card__name">Cardholder Name</label>
+          <input required id="card__name" type="text" placeholder="e.g. Jane Appleseed">
+        </div>
+        <div>
+          <label for="card__number">Card Number</label>
+          <input required id="card__number" type="number" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+        <div class="row">
+          <div>
+            <label for="card__month">Exp. Date (MM/YY)</label>
+            <div class="date-holder">
+              <input max="12" required id="card__month" type="number" placeholder="MM">
+              <input max="99" required id="card__year" type="number" placeholder="YY">
+            </div>
+          </div>
+          <div>
+            <label for="card__cvc">CVC</label>
+            <input max="999" maxlength="3" required id="card__cvc" type="number" placeholder="e.g. 123">
+          </div>
+        </div>
+        <input type="submit" value="Confirm">
       </form>
       <div class="complete" style="display: none;">
         Thank you!
