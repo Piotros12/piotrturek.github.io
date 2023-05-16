@@ -130,6 +130,9 @@ main {
   position: absolute;
   bottom: var(--padding-card-front);
   left: var(--padding-card-front);
+  max-width: 175px;
+  overflow: hidden;
+  max-height: 1rem;
 }
 
 .card--front__date {
@@ -214,6 +217,7 @@ main {
 
 form {
   width: 50%;
+  max-width: 450px;
   margin-left: 175px;
   display: flex;
   flex-direction: column;
@@ -265,7 +269,7 @@ form:invalid input[type="submit"] {
   background-color: var(--color-light);
 }
 
-input:invalid {
+form.confirmed input:invalid {
   border-color: var(--color-red);
 }
 /* UKRYCIE STRZALEK */

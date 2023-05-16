@@ -33,7 +33,8 @@
         <div class="circles"></div>
         <span class="card--front__number">0000 0000 0000 0000</span>
         <span class="card--front__owner">Jane Appleseed</span>
-        <span class="card--front__date">00/00</span>
+        <span class="card--front__date"><span id="card--front__date__month">00</span>/<span
+            id="card--front__date__year">00</span> </span>
       </div>
       <div class="card card--back">
         <div class="card--back__line"></div>
@@ -53,26 +54,27 @@
       </div>
     </div>
     <div class="right-side">
-      <form action="">
+      <form class="form" action="">
         <div>
           <label for="card__name">Cardholder Name</label>
-          <input required id="card__name" type="text" placeholder="e.g. Jane Appleseed">
+          <input pattern="[a-zA-Z]+" required id="card__name" type="text" placeholder="e.g. Jane Appleseed">
         </div>
         <div>
           <label for="card__number">Card Number</label>
-          <input required id="card__number" type="number" placeholder="e.g. 1234 5678 9123 0000">
+          <input pattern="[0-9]+" required id="card__number" type="text" maxlength="16"
+            placeholder="e.g. 1234 5678 9123 0000">
         </div>
         <div class="row">
           <div>
             <label for="card__month">Exp. Date (MM/YY)</label>
             <div class="date-holder">
-              <input max="12" required id="card__month" type="number" placeholder="MM">
-              <input max="99" required id="card__year" type="number" placeholder="YY">
+              <input pattern="[0-9]+" maxlength="2" required id="card__month" type="text" placeholder="MM">
+              <input pattern="[0-9]+" maxlength="2" required id="card__year" type="text" placeholder="YY">
             </div>
           </div>
           <div>
             <label for="card__cvc">CVC</label>
-            <input max="999" maxlength="3" required id="card__cvc" type="number" placeholder="e.g. 123">
+            <input pattern="[0-9]+" maxlength="3" required id="card__cvc" type="text" placeholder="e.g. 123">
           </div>
         </div>
         <input type="submit" value="Confirm">
