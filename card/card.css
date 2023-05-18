@@ -217,8 +217,9 @@ main {
 
 form {
   width: 50%;
+  min-width: 280px;
   max-width: 450px;
-  margin-left: 175px;
+  margin-left: 160px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -283,3 +284,26 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 /* UKRYCIE STRZALEK */
+
+@media (width < 715px) {
+  main {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+  .form {
+    margin: 50px 0;
+  }
+  .card--front {
+    top: 200px;
+    left: -20px;
+    z-index: 2;
+  }
+  .card--back {
+    bottom: 70px;
+    left: 7%;
+  }
+}
