@@ -61,28 +61,32 @@
         </div>
         <div>
           <label for="card__number">Card Number</label>
-          <input pattern="[0-9]+" required id="card__number" type="text" maxlength="16"
+          <input pattern="[0-9]+" required id="card__number" type="text" minlength="16" maxlength="16"
             placeholder="e.g. 1234 5678 9123 0000">
         </div>
         <div class="row">
           <div>
             <label for="card__month">Exp. Date (MM/YY)</label>
             <div class="date-holder">
-              <input pattern="[0-9]+" maxlength="2" required id="card__month" type="text" placeholder="MM">
-              <input pattern="[0-9]+" maxlength="2" required id="card__year" type="text" placeholder="YY">
+              <input pattern="[0-9]+" minlength="2" maxlength="2" required id="card__month" type="text"
+                placeholder="MM">
+              <input pattern="[0-9]+" minlength="2" maxlength="2" required id="card__year" type="text" placeholder="YY">
             </div>
           </div>
           <div>
             <label for="card__cvc">CVC</label>
-            <input pattern="[0-9]+" maxlength="3" required id="card__cvc" type="text" placeholder="e.g. 123">
+            <input pattern="[0-9]+" minlength="3" maxlength="3" required id="card__cvc" type="text"
+              placeholder="e.g. 123">
           </div>
         </div>
-        <input type="submit" value="Confirm">
+        <input type="submit" value="Confirm" id="form--submit" onclick="submitClick(event)">
       </form>
-      <div class="complete" style="display: none;">
-        Thank you!
-        We've added your card details
-        Continue
+      </form>
+      <div class="complete" style="display: none">
+        <img src="images/icon-complete.svg" alt="complete icon">
+        <h1>Thank you! </h1>
+        <p> We've added your card details</p>
+        <button onClick="window.location.reload();">Continue</button>
       </div>
     </div>
   </main>

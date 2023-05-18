@@ -44,3 +44,21 @@ function updateCard() {
 }
 
 window.addEventListener("input", updateCard);
+
+const submit = document.getElementById("form--submit");
+const form = document.querySelector(".form");
+const completeMessage = document.querySelector(".complete");
+
+function submitClick() {
+  if (
+    formDateYear.checkValidity() &&
+    formDateMonth.checkValidity() &&
+    formCvc.checkValidity() &&
+    formNumber.checkValidity() &&
+    formOwner.checkValidity()
+  ) {
+    event.preventDefault();
+    form.style.display = "none";
+    completeMessage.style.display = "flex";
+  }
+}
