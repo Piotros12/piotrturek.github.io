@@ -60,5 +60,8 @@ function submitClick() {
     event.preventDefault();
     form.style.display = "none";
     completeMessage.style.display = "flex";
+    form.classList.remove("confirmed");
+  } else {
+    form.classList.add("confirmed");
   }
 }

@@ -273,6 +273,7 @@ form:invalid input[type="submit"] {
 
 form.confirmed input:invalid {
   border-color: var(--color-red);
+  border-width: 2px;
 }
 
 /* UKRYCIE STRZALEK */
@@ -298,6 +299,7 @@ input[type="number"] {
   }
   .form {
     margin: 50px 0;
+    width: 80%;
   }
   .card--front {
     top: 200px;
