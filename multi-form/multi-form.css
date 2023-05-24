@@ -53,7 +53,7 @@ main {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* sidebar */
@@ -144,16 +144,13 @@ input:focus {
   font-weight: 500;
 }
 
-button {
+.next {
   border: none;
-  width: fit-content;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   background-color: var(--marine-blue);
   color: var(--white);
   font-weight: 700;
-  margin-left: auto;
-  margin-top: 3rem;
 }
 
 .form__header {
@@ -173,4 +170,127 @@ button {
   font-weight: 700;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  font-family: "Ubuntu", sans-serif !important;
+  margin-top: 3rem;
+}
+
+.return {
+  background: none;
+  color: var(--cool-gray);
+  margin-left: 0;
+  border: none;
+  font-weight: 700 !important;
+}
+
+/* STEP 2 */
+.plans {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.plans label {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 33%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.plans__card {
+  border: 1.5px solid var(--light-gray);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.plans__card img {
+  width: 2rem;
+  margin-bottom: 2rem;
+}
+
+.plans__title {
+  color: var(--marine-blue);
+  font-weight: 700;
+}
+
+.plans__price {
+  color: var(--cool-gray);
+}
+
+.plans__info {
+  color: var(--light-blue);
+}
+
+input:checked + .plans__card {
+  border-color: var(--purplish-blue);
+  background-color: var(--magnolia);
+}
+
+/* Switch */
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--magnolia);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  color: var(--cool-gray);
+}
+
+#switch__button {
+  position: relative;
+  display: block;
+  width: 2.5rem;
+  height: 1.25rem;
+  /* visibility: hidden; */
+}
+
+#switch__button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--marine-blue);
+  border-radius: calc(1.25rem / 2);
+  position: absolute;
+  visibility: visible;
+}
+
+#switch__button::after {
+  content: "";
+  z-index: 2;
+  height: 60%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white);
+  border-radius: calc(1.25rem / 2);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  visibility: visible;
+}
+
+#switch__button:checked::after {
+  right: 4px !important;
+  left: auto;
+}
+
+#switch__button:checked ~ #yearly-text {
+  color: var(--marine-blue) !important;
+}
+
+#switch__button:not(:checked) ~ #monthly-text {
+  color: var(--marine-blue) !important;
+}
+
+#monthly-text {
+  order: -1;
+}
 /* <730 mobile */
