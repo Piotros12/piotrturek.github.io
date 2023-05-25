@@ -76,7 +76,7 @@
         </div>
       </div>
 
-      <div id="step2" class="step0">
+      <div id="step2" class="step0 hidden">
 
         <div class="form__header">
           <h1>Select your plan</h1>
@@ -143,35 +143,68 @@
         </div>
       </div>
 
-      <div id="step3" class="hidden">
-        Pick add-ons
-        Add-ons help enhance your gaming experience.
-
-        Online service
-        Access to multiplayer games
-        +$1/mo
-
-        Larger storage
-        Extra 1TB of cloud save
-        +$2/mo
-
-        Customizable Profile
-        Custom theme on your profile
-        +$2/mo
-
-        Go Back
-        Next Step
+      <div id="step3" class="step0 hidden">
+        <div class="form__header">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+        </div>
+        <div class="add-ons">
+          <label for="add-ons__online-service">
+            <input type="checkbox" name="" id="add-ons__online-service">
+            <div>
+              <span class="add-ons__name">Online service</span>
+              <span class="add-ons__describe">Access to multiplayer games</span>
+            </div>
+            <span class="add-ons__price">+$1/mo</span>
+            <span class="add-ons__price hidden">+$10/yr</span>
+          </label>
+          <label for="add-ons__larger-storage">
+            <input type="checkbox" name="" id="add-ons__larger-storage">
+            <div>
+              <span class="add-ons__name">Larger storage</span>
+              <span class="add-ons__describe">Extra 1TB of cloud save</span>
+            </div>
+            <span class="add-ons__price">+$2/mo</span>
+            <span class="add-ons__price hidden">+$20/yr</span>
+          </label>
+          <label for="add-ons__custom-profile">
+            <input type="checkbox" name="" id="add-ons__custom-profile">
+            <div>
+              <span class="add-ons__name">Customizable Profile</span>
+              <span class="add-ons__describe">Custom theme on your profile</span>
+            </div>
+            <span class="add-ons__price">+$2/mo</span>
+            <span class="add-ons__price hidden">+$20/yr</span>
+          </label>
+        </div>
+        <div class="buttons">
+          <button onclick="submitStep1()" class="next">Next Step</button>
+          <button onclick="returnToStep1()" class="return">Go Back</button>
+        </div>
       </div>
-      <div id="step4" class="hidden">
-        Finishing up
-        Double-check everything looks OK before confirming.
+      <div id="step4" class="step0">
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+        <div class="sum">
+          <div class="sum__ingrediends">
+            <div class="sum__ingrediends__left">
+              <span id="sum__ingrediends__left__plan">Arcade
+                <span class="sum__ingrediends__left__plan__period">(Yearly)</span>
+              </span>
+              <a href="">Change</a>
+            </div>
 
-        <!-- Dynamically add subscription and add-on selections here -->
+          </div>
+          <div class="sum__total">
+            <p>Total (per month/year)</p>
+          </div>
+        </div>
 
-        Total (per month/year)
 
-        Go Back
-        Confirm
+        <div class="buttons">
+          <button onclick="submitStep1()" class="next">Next Step</button>
+          <button onclick="returnToStep1()" class="return">Go Back</button>
+        </div>
       </div>
       <div id="step5" class="hidden">
         Thank you!
