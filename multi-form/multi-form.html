@@ -14,7 +14,7 @@
 
   <main>
     <div class="sidebar">
-      <div class="step active">
+      <div class="step">
         <span class="number">1</span>
         <div>
           <span class="step__counter">Step 1</span>
@@ -206,8 +206,8 @@
       </div>
 
       <div class="buttons">
-        <button onclick="submitStep1()" id="button-next" class="">Next Step</button>
-        <button onclick="returnToStep1()" id="button-previous" class="">Go Back</button>
+        <button onclick="nextStep(event)" id="button-next" class="">Next Step</button>
+        <button onclick="previousStep(event)" id="button-previous" class="">Go Back</button>
       </div>
 
     </form>

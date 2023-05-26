@@ -43,7 +43,9 @@ p {
 }
 
 main {
-  max-width: 90%;
+  width: 90%;
+  max-width: 900px;
+  min-height: 600px;
   margin: auto;
   background-color: var(--alabaster);
   border-radius: 1rem;
@@ -91,7 +93,7 @@ main {
   text-align: center;
 }
 
-.step.active .number {
+.number.active {
   background-color: var(--light-blue);
   color: black;
 }
@@ -177,7 +179,7 @@ input:focus {
   justify-content: space-between;
   flex-direction: row-reverse;
   font-family: "Ubuntu", sans-serif !important;
-  margin-top: 3rem;
+  margin-top: auto;
 }
 
 button {
@@ -399,7 +401,9 @@ input:checked + .plans__card {
 
 #step5 {
   text-align: center;
-  margin: 6rem 0;
+  align-items: center;
+  margin: auto 0;
+  padding-top: 5rem;
 }
 
 #step5 img {
