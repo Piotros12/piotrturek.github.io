@@ -116,12 +116,14 @@ form {
   padding: 1rem 4rem 1rem 4rem;
   display: flex;
   gap: 1rem;
+  flex-direction: column;
 }
 
 .step0 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  display: none;
 }
 
 input {
@@ -144,7 +146,7 @@ input:focus {
   font-weight: 500;
 }
 
-.next {
+#button-next {
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
@@ -178,12 +180,18 @@ input:focus {
   margin-top: 3rem;
 }
 
-.return {
+button {
+  cursor: pointer;
+}
+
+#button-previous {
   background: none;
   color: var(--cool-gray);
   margin-left: 0;
   border: none;
   font-weight: 700 !important;
+  padding: 0.5rem 1.5rem;
+  margin-right: auto;
 }
 
 /* STEP 2 */
@@ -333,5 +341,69 @@ input:checked + .plans__card {
 
 .add-ons input:checked ~ label {
   border-color: red;
+}
+
+.sum,
+.sum a {
+  font-size: 0.9rem;
+  color: var(--cool-gray);
+}
+
+.sum__ingrediends {
+  background-color: var(--magnolia);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sum__ingrediends .sum__row:first-child {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.sum__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sum__row div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sum__total {
+  padding: 1rem;
+}
+
+.sum__plan {
+  font-weight: 700;
+  color: var(--marine-blue);
+}
+
+.price {
+  color: var(--marine-blue);
+  font-weight: 700;
+}
+
+.price.light {
+  font-weight: 400;
+}
+
+.price.bold {
+  font-size: 1.1rem;
+  color: var(--purplish-blue);
+}
+
+#step5 {
+  text-align: center;
+  margin: 6rem 0;
+}
+
+#step5 img {
+  width: 15%;
+  margin: auto;
 }
 /* <730 mobile */

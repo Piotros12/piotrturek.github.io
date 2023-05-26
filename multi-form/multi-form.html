@@ -45,7 +45,7 @@
     </div>
     <form action="">
 
-      <div id="step1" class="step0 hidden">
+      <div id="step1" class="step0">
         <div class="form__header">
           <h1>Personal info</h1>
           <p>Please provide your name, email address, and phone number.</p>
@@ -71,18 +71,13 @@
           </div>
           <input type="text" id="phone" placeholder="e.g. +1 234 567 890">
         </div>
-        <div class="buttons">
-          <button onclick="submitStep1()" class="next">Next Step</button>
-        </div>
       </div>
 
-      <div id="step2" class="step0 hidden">
-
+      <div id="step2" class="step0">
         <div class="form__header">
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing.</p>
         </div>
-
         <div class="plans" id="monthly">
           <label for="arcade-mo">
             <input type="radio" name="plan" id="arcade-mo" class="plan__radio">
@@ -109,7 +104,6 @@
             </div>
           </label>
         </div>
-
         <div class="plans hidden" id="yearly">
           <div class="plans__card">
             <img src="assets/images/icon-arcade.svg" alt="">
@@ -130,20 +124,14 @@
             <span class="plans__info">2 months free</span>
           </div>
         </div>
-
         <div class="switch">
           <input type="checkbox" name="" id="switch__button">
           <span id="monthly-text">Monthly</span>
           <span id="yearly-text">Yearly</span>
         </div>
-
-        <div class="buttons">
-          <button onclick="submitStep1()" class="next">Next Step</button>
-          <button onclick="returnToStep1()" class="return">Go Back</button>
-        </div>
       </div>
 
-      <div id="step3" class="step0 hidden">
+      <div id="step3" class="step0">
         <div class="form__header">
           <h1>Pick add-ons</h1>
           <p>Add-ons help enhance your gaming experience.</p>
@@ -177,42 +165,51 @@
             <span class="add-ons__price hidden">+$20/yr</span>
           </label>
         </div>
-        <div class="buttons">
-          <button onclick="submitStep1()" class="next">Next Step</button>
-          <button onclick="returnToStep1()" class="return">Go Back</button>
-        </div>
       </div>
+
       <div id="step4" class="step0">
         <h1>Finishing up</h1>
         <p>Double-check everything looks OK before confirming.</p>
         <div class="sum">
           <div class="sum__ingrediends">
-            <div class="sum__ingrediends__left">
-              <span id="sum__ingrediends__left__plan">Arcade
-                <span class="sum__ingrediends__left__plan__period">(Yearly)</span>
-              </span>
-              <a href="">Change</a>
+            <div class="sum__row">
+              <div>
+                <span class="sum__plan">Arcade (Yearly)</span>
+                <span><a href="">Change</a></span>
+              </div>
+              <span class="price ">$90/yr</span>
             </div>
-
+            <div class="sum__row">
+              <span>Service 1</span>
+              <span class="price light">+$10/yr</span>
+            </div>
+            <div class="sum__row">
+              <span>Service 2</span>
+              <span class="price light">+$10/yr</span>
+            </div>
           </div>
           <div class="sum__total">
-            <p>Total (per month/year)</p>
+            <div class="sum__row">
+              <span>Total (per month/year)</span>
+              <span class="price bold">$110/yr</span>
+            </div>
           </div>
         </div>
-
-
-        <div class="buttons">
-          <button onclick="submitStep1()" class="next">Next Step</button>
-          <button onclick="returnToStep1()" class="return">Go Back</button>
-        </div>
       </div>
-      <div id="step5" class="hidden">
-        Thank you!
 
-        Thanks for confirming your subscription! We hope you have fun
-        using our platform. If you ever need support, please feel free
-        to email us at support@loremgaming.com.
+      <div id="step5" class="step0">
+        <img src="assets/images/icon-thank-you.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.</p>
       </div>
+
+      <div class="buttons">
+        <button onclick="submitStep1()" id="button-next" class="">Next Step</button>
+        <button onclick="returnToStep1()" id="button-previous" class="">Go Back</button>
+      </div>
+
     </form>
   </main>
   <script src="multi-form.js"></script>
