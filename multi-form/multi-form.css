@@ -341,10 +341,6 @@ input:checked + .plans__card {
   scale: 1.25;
 }
 
-.add-ons input:checked ~ label {
-  border-color: red;
-}
-
 .sum,
 .sum a {
   font-size: 0.9rem;
