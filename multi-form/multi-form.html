@@ -84,7 +84,10 @@
             <div class="plans__card">
               <img src="assets/images/icon-arcade.svg" alt="">
               <span class="plans__title">Arcade</span>
-              <span class="plans__price">$9/mo</span>
+
+              <span class="plans__price" data-plan="monthly">$9/mo</span>
+              <span class="plans__price" data-plan="yearly">$90/yr</span>
+              <span class="plans__info" data-plan="yearly">2 months free</span>
             </div>
           </label>
           <label for="advenced-mo">
@@ -92,7 +95,10 @@
             <div class="plans__card">
               <img src="assets/images/icon-advanced.svg" alt="">
               <span class="plans__title">Advenced</span>
-              <span class="plans__price">$12/mo</span>
+
+              <span class="plans__price" data-plan="monthly">$12/mo</span>
+              <span class="plans__price" data-plan="yearly">$120/yr</span>
+              <span class="plans__info" data-plan="yearly">2 months free</span>
             </div>
           </label>
           <label for="pro-mo">
@@ -100,35 +106,18 @@
             <div class="plans__card">
               <img src="assets/images/icon-pro.svg" alt="">
               <span class="plans__title">Pro</span>
-              <span class="plans__price">$15/mo</span>
+              <span class="plans__price" data-plan="monthly">$15/mo</span>
+              <span class="plans__price" data-plan="yearly">$150/yr</span>
+              <span class="plans__info" data-plan="yearly">2 months free</span>
             </div>
           </label>
         </div>
-        <div class="plans hidden" id="yearly">
-          <div class="plans__card">
-            <img src="assets/images/icon-arcade.svg" alt="">
-            <span class="plans__title">Arcade</span>
-            <span class="plans__price">$90/yr</span>
-            <span class="plans__info">2 months free</span>
-          </div>
-          <div class="plans__card">
-            <img src="assets/images/icon-advanced.svg" alt="">
-            <span class="plans__title">Advenced</span>
-            <span class="plans__price">$120/yr</span>
-            <span class="plans__info">2 months free</span>
-          </div>
-          <div class="plans__card">
-            <img src="assets/images/icon-pro.svg" alt="">
-            <span class="plans__title">Pro</span>
-            <span class="plans__price">$150/yr</span>
-            <span class="plans__info">2 months free</span>
-          </div>
-        </div>
-        <div class="switch">
+
+        <label class="switch" for="switch__button">
           <input type="checkbox" name="" id="switch__button">
           <span id="monthly-text">Monthly</span>
           <span id="yearly-text">Yearly</span>
-        </div>
+        </label>
       </div>
 
       <div id="step3" class="step0">
@@ -138,33 +127,39 @@
         </div>
         <div class="add-ons">
           <label for="add-ons__online-service">
-            <input type="checkbox" name="" id="add-ons__online-service">
-            <div>
+            <div class="add-ons-card">
+              <input type="checkbox" name="" id="add-ons__online-service">
               <div>
-                <span class="add-ons__name">Online service</span>
-                <span class="add-ons__describe">Access to multiplayer games</span>
+                <div>
+                  <span class="add-ons__name">Online service</span>
+                  <span class="add-ons__describe">Access to multiplayer games</span>
+                </div>
               </div>
-              <span class="add-ons__price">+$1/mo</span>
-              <span class="add-ons__price hidden">+$10/yr</span>
+              <span class="add-ons__price" data-plan="monthly">+$1/mo</span>
+              <span class="add-ons__price" data-plan="yearly">+$10/yr</span>
             </div>
           </label>
           <label for="add-ons__larger-storage">
-            <input type="checkbox" name="" id="add-ons__larger-storage">
-            <div>
-              <span class="add-ons__name">Larger storage</span>
-              <span class="add-ons__describe">Extra 1TB of cloud save</span>
+            <div class="add-ons-card">
+              <input type="checkbox" name="" id="add-ons__larger-storage">
+              <div>
+                <span class="add-ons__name">Larger storage</span>
+                <span class="add-ons__describe">Extra 1TB of cloud save</span>
+              </div>
+              <span class="add-ons__price" data-plan="monthly">+$2/mo</span>
+              <span class="add-ons__price" data-plan="yearly">+$20/yr</span>
             </div>
-            <span class="add-ons__price">+$2/mo</span>
-            <span class="add-ons__price hidden">+$20/yr</span>
           </label>
           <label for="add-ons__custom-profile">
-            <input type="checkbox" name="" id="add-ons__custom-profile">
-            <div>
-              <span class="add-ons__name">Customizable Profile</span>
-              <span class="add-ons__describe">Custom theme on your profile</span>
+            <div class="add-ons-card">
+              <input type="checkbox" name="" id="add-ons__custom-profile">
+              <div>
+                <span class="add-ons__name">Customizable Profile</span>
+                <span class="add-ons__describe">Custom theme on your profile</span>
+              </div>
+              <span class="add-ons__price" data-plan="monthly">+$2/mo</span>
+              <span class="add-ons__price" data-plan="yearly">+$20/yr</span>
             </div>
-            <span class="add-ons__price">+$2/mo</span>
-            <span class="add-ons__price hidden">+$20/yr</span>
           </label>
         </div>
       </div>
@@ -177,7 +172,7 @@
             <div class="sum__row">
               <div>
                 <span class="sum__plan">Arcade (Yearly)</span>
-                <span><a href="">Change</a></span>
+                <span><a onclick="previousStep(event); previousStep(event);" class="underline">Change</a></span>
               </div>
               <span class="price ">$90/yr</span>
             </div>

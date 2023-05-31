@@ -287,11 +287,11 @@ input:checked + .plans__card {
   transform: translateY(-50%);
   left: 4px;
   visibility: visible;
+  transition: 0.3s;
 }
 
 #switch__button:checked::after {
-  right: 4px !important;
-  left: auto;
+  transform: translateY(-50%) translateX(165%);
 }
 
 #switch__button:checked ~ #yearly-text {
@@ -313,7 +313,7 @@ input:checked + .plans__card {
   gap: 1rem;
 }
 
-.add-ons label {
+.add-ons-card {
   border: 1px solid var(--light-gray);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -327,7 +327,7 @@ input:checked + .plans__card {
   width: auto;
 }
 
-.add-ons label div {
+.add-ons-card div {
   display: flex;
   flex-direction: column;
 }
@@ -339,6 +339,10 @@ input:checked + .plans__card {
 
 .add-ons input[type="checkbox"] {
   scale: 1.25;
+}
+
+.add-ons__price {
+  margin-left: auto;
 }
 
 .sum,
@@ -407,3 +411,6 @@ input:checked + .plans__card {
   margin: auto;
 }
 /* <730 mobile */
+.underline {
+  text-decoration: underline;
+}
