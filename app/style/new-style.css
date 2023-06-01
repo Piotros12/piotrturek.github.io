@@ -34,7 +34,6 @@
 }
 html {
   font-size: 16px;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body {
@@ -44,9 +43,7 @@ body {
   color: #fff;
   counter-reset: section;
 }
-section {
-  /* min-height: 400px; */
-}
+/* s */
 h1 {
   font-size: 2.8rem;
   margin: 5px 0;
@@ -530,7 +527,7 @@ h6 {
     font-size: 18px;
   }
   .header nav {
-    padding: 20px 20%;
+    padding: 20px 20% !important;
   }
   .navigation {
     padding: 0 20%;
