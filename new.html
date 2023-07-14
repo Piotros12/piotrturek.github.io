@@ -63,13 +63,14 @@
             <h1>Piotr Turek</h1>
             <h2>Junior frontend developer </h2>
             <h2> Beginner graphic and website designer</h2>
-            <a href="#contact" class="button button-green">Contact with me</a>
-            <a href="#about" class="button">Read more
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
-                    <path d="M2 2.5L13 15.5L24 2.5" stroke="black" stroke-width="5" />
-                </svg>
-            </a>
-
+            <div class="land-button-container">
+                <a href="#contact" class="button button-green">Contact with me</a>
+                <a href="#about" class="button">Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                        <path d="M2 2.5L13 15.5L24 2.5" stroke="black" stroke-width="5" />
+                    </svg>
+                </a>
+            </div>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="40%" id="blob-svg"
                 style="opacity: 1;" transform="rotate(0)" filter="blur(0px)">
                 <image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)" href="/images/zdj.jpg"
@@ -88,27 +89,32 @@
                     </path>
                 </clipPath>
             </svg>
-            <div class="rect rect-green rect2" style="right:20px; top:18%"></div>
-            <div class="rect rect-green rect3" style="right:0px; top:30%"></div>
-            <div class="rect rect-green rect2" style="right:20px; top:60%"></div>
-            <div class="rect rect-green rect1" style="right:50px; top:67%"></div>
-            <div class="rect rect-green rect2" style="right:30px; top:80%"></div>
-            <div class="rect rect-green rect4" style="right:-170px; top:70%"></div>
+            <div class="rect rect2" style="right:20px; top:18%"></div>
+            <div class="rect rect3" style="right:0px; top:30%"></div>
+            <div class="rect rect2" style="right:20px; top:60%"></div>
+            <div class="rect rect1" style="right:50px; top:67%"></div>
+            <div class="rect rect2" style="right:30px; top:80%"></div>
+            <div class="rect rect4" style="right:-170px; top:70%"></div>
         </section>
 
         <section id="about" class="black">
-            <h3>About me</h3>
+            <h3 class="h3-right">About me</h3>
             <p>Swoją przygodę zacząłem od grafiki, głównie wektorowej - projektując loga, wizytówki czy proste bannery.
                 Od dawna interesuję się również tworzeniem stron internetowych. Jestem samoukiem, więc zdobywam wiedzę
                 korzystając z możliwości kursów internetowych, oraz próbując swoich sił w różnych projektach w celu
                 nauki. Chciałbym zawodowo rozwijać się jako frontend developer.
             </p>
+            <div class="rect rect4" style="left:20px; top:18%"></div>
+            <div class="rect rect1" style="left:120px; top:25%"></div>
+            <div class="rect rect3" style="left:20px; top:45%"></div>
+            <div class="rect rect2" style="left:150px; top:80%"></div>
+            <div class="rect rect1" style="left:120px; top:90%"></div>
         </section>
 
         <section id="skills">
 
             <h3>My skills</h3>
-            <h6>HTML</h6>
+            <h6>&ltHTML/&gt</h6>
             <progress value="0.75" id="html"></progress>
             <h6>CSS</h6>
             <progress value="0.65" id="html"></progress>
@@ -126,11 +132,20 @@
             <progress value="0.65" id="html"></progress>
             <h6>Język Angielski</h6>
             <progress value="0.7" id="html"></progress>
+            <h6>Adobe Photoshop</h6>
+            <progress value="0.3" id="html"></progress>
+            <h6>Adobe Premiere Pro</h6>
+            <progress value="0.5" id="html"></progress>
+            <div class="rect rect2" style="right:140px; top:10%"></div>
+            <div class="rect rect1" style="right:120px; top:20%"></div>
         </section>
 
-        <section id="portfolio">
+        <section id="portfolio" class="h3-right">
             <h3>Portfolio</h3>
-            <div id="projects">
+
+
+
+            <!-- <div id="projects">
                 <ul>
                     <li>
                         <a target="_blank" href="https://ravid.pl" rel="external">
@@ -209,8 +224,10 @@
                                     <img src="images/js.svg" alt="javascript icon">
                                 </div>
                             </a>
-                        </li>
-                        <!-- <li>
+                        </li> -->
+
+
+            <!-- <li>
                             <a href="qr-code/qr-code.html">
                                 <h1>QR Code</h1>
                                 <img src="images/qr-code-preview.png" alt="">
@@ -220,7 +237,9 @@
                                 </div>
                             </a>
                         </li> -->
-                        <li>
+
+
+            <!-- <li>
                             <a href="landing-page/landing-page.html">
                                 <h1>Landing Page</h1>
                                 <img src="images/landing-page-preview.png" alt="">
@@ -244,10 +263,10 @@
                     </ul>
                     <a class="projects-arrow" id="projects-arrow--right"><img src="images/angle-right-solid.svg"
                             alt=""></a>
-                </div>
+                </div> -->
         </section>
 
-        <section>
+        <!-- <section>
             <h3>Grafiki</h3>
             <div id="gallery">
                 <img src="images/grafiki/Portfolio_ (1).png">
@@ -268,13 +287,13 @@
                 <img src="images/grafiki/Portfolio_ (16).png">
                 <img src="images/grafiki/Portfolio_ (17).png">
             </div>
-        </section>
+        </section> -->
 
         <section id="contact">
             <h3>Contact</h3>
             <p>Chcesz zadać pytanie? Napisz do mnie na <strong>maila</strong>.</p>
-            <div id="contactcontainer"><a href="mailto:piotrekturek286@gmail.com" target="_blank">Napisz do mnie!</a>
-            </div>
+            <a class="button button-green" href="mailto:piotrekturek286@gmail.com" target="_blank">Send me an
+                e-mail!</a>
         </section>
     </main>
 
