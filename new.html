@@ -292,20 +292,20 @@
 
         <section id="contact">
             <h3>Contact</h3>
-            <p>Chcesz zadać pytanie? Napisz do mnie na <strong>maila</strong>.</p>
-            <a class="button button-green" href="mailto:piotrekturek286@gmail.com" target="_blank">Send me an
-                e-mail!</a>
+            <p>Chcesz zadać pytanie? Napisz do mnie na maila.</p>
+            <a class="button" href="mailto:piotrekturek286@gmail.com" target="_blank">E-mail me!</a>
+            <p>Or use the form below:</p>
             <form action="https://formspree.io/f/xrgwgwdj" method="POST">
                 <label>
                     Your email:
-                    <input type="email" name="email">
+                    <input required type="email" name="email" placeholder="">
                 </label>
                 <label>
                     Your message:
-                    <textarea name="message"></textarea>
+                    <textarea required name="message"></textarea>
                 </label>
                 <!-- your other form fields go here -->
-                <button type="submit">Send</button>
+                <button class="button button-green form-button" type="submit">Send me an e-mail!</button>
             </form>
         </section>
     </main>
