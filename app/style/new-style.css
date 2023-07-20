@@ -294,7 +294,11 @@ section.black {
   aspect-ratio: 1 / 1;
   border: 1px solid var(--white);
   position: absolute;
-  animation: rotationa 180s infinite;
+  animation: rotationa 180s infinite linear;
+}
+
+.rect:nth-of-type(2n) {
+  animation: rotationa 8s infinite linear;
 }
 
 @keyframes rotationa {
@@ -377,6 +381,9 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-top: 50px;
 }
 label {
   display: flex;
