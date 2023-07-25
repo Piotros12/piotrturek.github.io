@@ -340,9 +340,26 @@ section.black {
   margin-inline: 20% 5%;
 }
 
+#about .arrow-down {
+  position: absolute;
+  right: 10%;
+  bottom: 80px;
+}
+
 #skills {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   z-index: 1;
+}
+
+#skills .bars-container {
+  width: clamp(280px, 70%, 100%);
+  margin-inline: auto;
+}
+
+#skills .arrow-down {
+  position: absolute;
+  left: 10%;
+  bottom: 80px;
 }
 
 progress,
@@ -422,7 +439,61 @@ form .button {
   cursor: pointer;
 }
 
-/* GRAFIKI CHYBA OKEJ ALE DO SPRAWDZENIA */
+#portfolio h3 {
+  position: absolute;
+  right: 100px;
+  top: 112px;
+  mix-blend-mode: difference;
+  color: var(--white);
+}
+
+#portfolio h3::before {
+  mix-blend-mode: normal;
+}
+
+#portfolio {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+#portfolio span {
+  font-size: var(--font-big);
+  mix-blend-mode: difference;
+  color: var(--white);
+}
+
+#portfolio__right,
+#portfolio__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#portfolio__right {
+  background-color: var(--black);
+}
+
+#portfolio__right:hover,
+#portfolio__left:hover {
+  flex-grow: 7;
+}
+
+#websites,
+#graphics {
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+  min-height: 100dvh;
+  padding: 0 40px 32px 40px;
+  background-color: var(--white);
+  padding-top: calc(5% + 90px);
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+/* GRAFIKI*/
 #gallery {
   display: flex;
   width: 100%;
