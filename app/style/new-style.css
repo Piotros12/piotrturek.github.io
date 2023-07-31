@@ -91,6 +91,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 10;
+  top: -1px; /*fixing 1px black line on top of mobile version*/
 }
 
 header nav {
@@ -258,7 +259,7 @@ section.black {
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25) inset,
     0px 0px 20px 3px rgba(0, 0, 0, 0.25);
   font-size: var(--font-big);
-  margin: 40px 10%;
+  margin: 40px 0px 40px 12%;
   transition: 0.3s;
 }
 
@@ -280,7 +281,7 @@ section.black {
 }
 
 .land-button-container {
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 #blob-svg {
@@ -313,6 +314,12 @@ section.black {
 #land .rect,
 #skills .rect {
   border-color: var(--green);
+}
+
+#land {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
 }
 
 .rect.rect1 {
@@ -548,7 +555,7 @@ form .button {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 /* GRAFIKI*/
 #gallery {
@@ -577,6 +584,7 @@ footer {
 footer p {
   text-align: center;
   font-size: 0.8rem;
+  font-weight: 300 !important;
 }
 footer p.arrow {
   display: flex;
@@ -610,14 +618,17 @@ footer a:hover svg {
 
 /* WEBSITES */
 
+#websites {
+  padding-top: 130px !important;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
 #websites ul {
   list-style-type: none;
   padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  height: 100%;
 }
 
 #websites li {
@@ -627,6 +638,7 @@ footer a:hover svg {
   overflow: hidden;
   transition: 0.3s;
   overflow: visible;
+  padding-left: 0;
 }
 
 #websites li a {
@@ -653,12 +665,11 @@ footer a:hover svg {
 }
 
 #websites .mockups img:nth-child(1) {
-  height: 35vh;
+  height: 45vh;
   position: relative;
-  /* left: -50px; */
 }
 #websites .mockups img:nth-child(2) {
-  height: 25vh;
+  height: 35vh;
   position: absolute;
   right: 0;
 }
@@ -669,12 +680,12 @@ footer a:hover svg {
   justify-content: space-around;
   align-items: center;
   margin-top: auto;
-  height: 150px;
+  height: 100px;
   transition: 0.3s;
 }
 
 #websites .stack-container img {
-  height: 25%;
+  height: min(5vh, 5vw);
 }
 
 #websites .live {
@@ -709,7 +720,7 @@ footer a:hover svg {
   transition: 0.3s;
   transform: translateX(-50%) translateY(-50%);
   z-index: 5;
-  font-size: 5vw;
+  font-size: var(--font-big);
   text-align: center;
 }
 
