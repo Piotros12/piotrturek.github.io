@@ -53,40 +53,82 @@ function closeHamburger() {
 // }, 50);
 
 // PROJECTS CARRUSEL
-const projectsList = document.querySelector("#projects-carusell ul");
-const projectItems = document.querySelectorAll("#projects-carusell ul li");
-const arrowLeft = document.querySelector("#projects-arrow--left");
-const arrowRight = document.querySelector("#projects-arrow--right");
-let itemWidth = projectItems[0].offsetWidth; // szerokość pojedynczego elementu
+// const projectsList = document.querySelector("#projects-carusell ul");
+// const projectItems = document.querySelectorAll("#projects-carusell ul li");
+// const arrowLeft = document.querySelector("#projects-arrow--left");
+// const arrowRight = document.querySelector("#projects-arrow--right");
+// let itemWidth = projectItems[0].offsetWidth; // szerokość pojedynczego elementu
 
-window.onresize = function () {
-  itemWidth = projectItems[0].offsetWidth;
-};
+// window.onresize = function () {
+//   itemWidth = projectItems[0].offsetWidth;
+// };
 
-let currentPosition = 0;
+// let currentPosition = 0;
 
-arrowLeft.addEventListener("click", () => {
-  if (currentPosition <= 0) {
-    // przesuwamy na koniec
-    currentPosition = projectsList.scrollWidth - projectsList.offsetWidth;
-  } else {
-    // przesuwamy o szerokość pojedynczego elementu
-    currentPosition -= itemWidth;
+// arrowLeft.addEventListener("click", () => {
+//   if (currentPosition <= 0) {
+//     // przesuwamy na koniec
+//     currentPosition = projectsList.scrollWidth - projectsList.offsetWidth;
+//   } else {
+//     // przesuwamy o szerokość pojedynczego elementu
+//     currentPosition -= itemWidth;
+//   }
+//   projectsList.scrollTo({
+//     left: currentPosition,
+//   });
+// });
+
+// arrowRight.addEventListener("click", () => {
+//   if (currentPosition >= projectsList.scrollWidth - projectsList.offsetWidth) {
+//     // przesuwamy na początek
+//     currentPosition = 0;
+//   } else {
+//     // przesuwamy o szerokość pojedynczego elementu
+//     currentPosition += itemWidth;
+//   }
+//   projectsList.scrollTo({
+//     left: currentPosition,
+//   });
+// });
+
+// Portfolio
+const portfolioSection = document.getElementById("portfolio");
+const frontend = document.getElementById("portfolio__left");
+const graphic = document.getElementById("portfolio__right");
+const frontendContainer = document.getElementById("websites");
+const graphicContainer = document.getElementById("graphics");
+let active = "none";
+
+frontend.addEventListener("click", portfolioSwitchToFrontend);
+graphic.addEventListener("click", portfolioSwitchToGraphic);
+
+function portfolioSwitchToFrontend() {
+  active = "frontend";
+  portfolioChangeClasses();
+  console.log(active);
+}
+
+function portfolioSwitchToGraphic() {
+  active = "graphic";
+  portfolioChangeClasses();
+  console.log(active);
+}
+
+function portfolioChangeClasses() {
+  portfolioSection.classList.add("active");
+  if (active === "frontend") {
+    graphic.classList.remove("active");
+    frontend.classList.add("active");
+    graphicContainer.classList.add("hidden");
+    frontendContainer.classList.remove("hidden");
   }
-  projectsList.scrollTo({
-    left: currentPosition,
-  });
-});
-
-arrowRight.addEventListener("click", () => {
-  if (currentPosition >= projectsList.scrollWidth - projectsList.offsetWidth) {
-    // przesuwamy na początek
-    currentPosition = 0;
-  } else {
-    // przesuwamy o szerokość pojedynczego elementu
-    currentPosition += itemWidth;
+  if (active === "graphic") {
+    frontend.classList.remove("active");
+    graphic.classList.add("active");
+    frontendContainer.classList.add("hidden");
+    graphicContainer.classList.remove("hidden");
   }
-  projectsList.scrollTo({
-    left: currentPosition,
-  });
-});
+}
+
+console.log(graphicContainer);
+console.log(frontendContainer);
