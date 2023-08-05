@@ -15,7 +15,7 @@
     <meta property="og:image" content="/img/logo.png">
     <meta property="og:description" content="Piotr Turek | Portfolio | Freelancer">
     <meta property=”og:locale” content=”pl_PL” />
-    <meta name="theme-color" content="#0e1020">
+    <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="images/logo.svg">
 
     <link rel="stylesheet" href="/app/style/style.css">
@@ -26,12 +26,13 @@
 
 <body>
 
-    <header class="header">
-        <nav class="flex flex-jc-sb flex-a-c">
-            <a href="#TOP" class="header__logo" id="header__logo__click" onclick="logoClosingMenu()">
-                <img src="images/logo.svg" alt="Piotr Turek" title="Piotr Turek">
+    <header>
+        <nav>
+            <a href="#TOP" onclick="closeHamburger()" id="header__logo__click" class="header__logo">
+                <img src="images/logo-black.svg" alt="Piotr Turek Logo" title="Home Page">
             </a>
-            <button class="hamburger" id="hamburger__click" onclick="myFunction()">
+
+            <button class="hamburger" id="hamburger__click" onclick="handleHamburgerButton()">
                 <span class="hamburger__box">
                     <span class="hamburger__inner"></span>
                 </span>
@@ -39,20 +40,17 @@
 
             <div class="navigation" id="navigation__click">
                 <ol class="navigation__list">
-                    <a href="#about" onclick="myFunction()">
-                        <li>O mnie</li>
+                    <a href="#about" onclick="handleHamburgerButton()">
+                        <li>About me</li>
                     </a>
-                    <a href="#skills" onclick="myFunction()">
-                        <li>Umiejętności</li>
+                    <a href="#skills" onclick="handleHamburgerButton()">
+                        <li>My skills</li>
                     </a>
-                    <a href="#portfolio" onclick="myFunction()">
+                    <a href="#portfolio" onclick="handleHamburgerButton()">
                         <li>Portfolio</li>
                     </a>
-                    <a href="#graphics" onclick="myFunction()">
-                        <li>Grafiki</li>
-                    </a>
-                    <a href="#contact" onclick="myFunction()">
-                        <li>Kontakt</li>
+                    <a href="#contact" onclick="handleHamburgerButton()">
+                        <li>Contact</li>
                     </a>
                 </ol>
             </div>
@@ -60,73 +58,200 @@
     </header>
 
     <main>
-        <!-- IN PROGRESS -->
-        <!-- <div id="in-progress">
-            <p> PAGE STILL IN PROGRESS</p>
-        </div> -->
-        <!-- IN PROGRESS -->
-
         <section id="land">
-            <p class="code">Hello World!</p>
-            <h1>Piotr Turek</h1>
-            <h2>Graphic and website designer</h2>
-            <p>Cześć! Mam na imię Piotrek i jestem <strong class="animated-text"></strong>.</p>
+            <div>
+                <p class="code">Hello World!</p>
+                <h1>Piotr Turek</h1>
+                <h2>Junior frontend developer </h2>
+                <h2> Beginner graphic and website designer</h2>
+            </div>
+            <div class="land-button-container">
+                <a href="#contact" class="button button-green">Contact with me</a>
+                <a href="#about" class="button">Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                        <path d="M2 2.5L13 15.5L24 2.5" stroke="black" stroke-width="5" />
+                    </svg>
+                </a>
+            </div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="45%" id="blob-svg"
+                style="opacity: 1;" transform="rotate(0)" filter="blur(0px)">
+                <image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)" href="/images/zdj2.png"
+                    preserveAspectRatio="none"></image>
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: rgb(238, 205, 163);"></stop>
+                        <stop offset="100%" style="stop-color: rgb(239, 98, 159);"></stop>
+                    </linearGradient>
+                </defs>
+                <clipPath id="shape">
+                    <path id="blob" fill="url(#gradient)">
+                        <animate attributeName="d" dur="15000ms" repeatCount="indefinite"
+                            values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+                        </animate>
+                    </path>
+                </clipPath>
+            </svg>
+            <div class="rect rect2" style="right:20px; top:18%"></div>
+            <div class="rect rect3" style="right:0px; top:30%"></div>
+            <div class="rect rect2" style="right:20px; top:60%"></div>
+            <div class="rect rect1" style="right:50px; top:67%"></div>
+            <div class="rect rect2" style="right:30px; top:80%"></div>
+            <div class="rect rect4" style="right:-170px; top:70%"></div>
         </section>
 
-        <section id="about">
-            <h3>O mnie.</h3>
-            <p>Swoją przygodę zacząłem od grafiki, głównie wektorowej - projektując loga, wizytówki czy proste bannery.
-                Od dawna interesuję się również tworzeniem stron internetowych. Jestem samoukiem, więc zdobywam wiedzę
-                korzystając z możliwości kursów internetowych, oraz próbując swoich sił w różnych projektach w celu
-                nauki. Chciałbym zawodowo rozwijać się jako <strong>frontend developer</strong>.
+        <section id="about" class="black">
+            <h3 class="h3-right">About me</h3>
+            <p> <strong>Hello World!</strong> My name is Piotrek and I'm a freelancer from Poland, Wrocław. I started my
+                adventure
+                with graphics,
+                mainly vector, designing logos, business cards, and simple banners.
+                I have also
+                been interested in creating websites for a long time. I am self-taught, acquiring knowledge through
+                online courses and
+                trying my hand at various projects to learn. I would like to professionally develop myself as a frontend
+                developer.
             </p>
+            <ul>
+                <li><a target="_blank" href="https://github.com/piotr-turek"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 496 512">
+                            <path
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg></a></li>
+                <li><a target="_blank" href="https://linkedin.com/in/piotr-turek-2b5220237"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg></a></li>
+                <li><a target="_blank" href="https://codepen.io/piotr-turek"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z" />
+                        </svg></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/piotr_turas/"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg></a></li>
+            </ul>
+            <div class="rect rect4" style="left:20px; top:18%"></div>
+            <div class="rect rect1" style="left:120px; top:25%"></div>
+            <div class="rect rect3" style="left:20px; top:45%"></div>
+            <div class="rect rect2" style="left:150px; top:80%"></div>
+            <div class="rect rect1" style="left:120px; top:90%"></div>
+            <a href="#skills"><svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" width="38" height="78"
+                    viewBox="0 0 38 78" fill="none">
+                    <path
+                        d="M17.2322 76.7678C18.2085 77.7441 19.7915 77.7441 20.7678 76.7678L36.6777 60.8579C37.654 59.8816 37.654 58.2986 36.6777 57.3223C35.7014 56.346 34.1184 56.346 33.1421 57.3223L19 71.4645L4.85786 57.3223C3.88155 56.346 2.29864 56.346 1.32233 57.3223C0.346017 58.2986 0.346017 59.8816 1.32233 60.8579L17.2322 76.7678ZM16.5 0.5L16.5 75L21.5 75L21.5 0.5L16.5 0.5Z"
+                        fill="#27FFCC" />
+                </svg>
+            </a>
         </section>
 
         <section id="skills">
 
-            <h3>Umiejętności.</h3>
-            <h6>HTML</h6>
-            <progress value="0.75" id="html"></progress>
-            <h6>CSS</h6>
-            <progress value="0.65" id="html"></progress>
-            <h6>JavaScript</h6>
-            <progress value="0.25" id="html"></progress>
-            <h6>PHP</h6>
-            <progress value="0.1" id="html"></progress>
-            <h6>Git/Github</h6>
-            <progress value="0.35" id="html"></progress>
-            <h6>Adobe Illustrator</h6>
-            <progress value="0.8" id="html"></progress>
-            <h6>Adobe Xd</h6>
-            <progress value="0.5" id="html"></progress>
-            <h6>WordPress</h6>
-            <progress value="0.65" id="html"></progress>
-            <h6>Język Angielski</h6>
-            <progress value="0.7" id="html"></progress>
+            <h3>My skills</h3>
+            <div class="bars-container">
+                <h6>&ltHTML/&gt</h6>
+                <progress value="0.75" id="html"></progress>
+                <h6>CSS</h6>
+                <progress value="0.65" id="html"></progress>
+                <h6>JavaScript</h6>
+                <progress value="0.25" id="html"></progress>
+                <h6>PHP</h6>
+                <progress value="0.1" id="html"></progress>
+                <h6>Git/Github</h6>
+                <progress value="0.35" id="html"></progress>
+                <h6>Adobe Xd</h6>
+                <progress value="0.5" id="html"></progress>
+                <h6>Figma</h6>
+                <progress value="0.7" id="html"></progress>
+                <h6>WordPress</h6>
+                <progress value="0.65" id="html"></progress>
+                <h6>Język Angielski</h6>
+                <progress value="0.7" id="html"></progress>
+                <h6>Adobe Illustrator</h6>
+                <progress value="0.8" id="html"></progress>
+                <h6>Adobe Photoshop</h6>
+                <progress value="0.3" id="html"></progress>
+                <h6>Adobe Premiere Pro</h6>
+                <progress value="0.5" id="html"></progress>
+            </div>
+            <div class="rect rect2" style="right:140px; top:10%"></div>
+            <div class="rect rect1" style="right:120px; top:20%"></div>
+            <a href="#portfolio"><svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" width="38" height="78"
+                    viewBox="0 0 38 78" fill="none">
+                    <path
+                        d="M17.2322 76.7678C18.2085 77.7441 19.7915 77.7441 20.7678 76.7678L36.6777 60.8579C37.654 59.8816 37.654 58.2986 36.6777 57.3223C35.7014 56.346 34.1184 56.346 33.1421 57.3223L19 71.4645L4.85786 57.3223C3.88155 56.346 2.29864 56.346 1.32233 57.3223C0.346017 58.2986 0.346017 59.8816 1.32233 60.8579L17.2322 76.7678ZM16.5 0.5L16.5 75L21.5 75L21.5 0.5L16.5 0.5Z"
+                        fill="#27FFCC" />
+                </svg>
+            </a>
         </section>
 
-        <section id="portfolio">
-            <h3>Portfolio.</h3>
-            <div id="projects">
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://ravid.pl" rel="external">
-                            <h1>www.Ravid.pl</h1>
-                            <span class="live">LIVE! <img src="images/arrow-up-right-from-square-solid.svg"
-                                    alt=""></span>
-                            <img src="images/ravid-preview.png" alt="">
-                            <div class="stack-container">
-                                <img src="images/html5.svg" alt="html 5 icon">
-                                <img src="images/css3-alt.svg" alt="css 3 icon">
-                                <img src="images/js.svg" alt="javascript icon">
-                                <img src="images/php.svg" alt="php icon">
-                                <img src="images/wordpress.svg" alt="wordpress icon">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+        <section id="portfolio" class="h3-right">
+            <h3>Portfolio</h3>
+            <div id="portfolio__left" class=""><span>Frontend Development</span></div>
+            <div id="portfolio__right" class=""><span>Graphic Design</span></div>
+        </section>
+
+        <div id="graphics" class="hidden">
+            <div id="gallery">
+                <img src="images/grafiki/Portfolio_ (1).png">
+                <img src="images/grafiki/Portfolio_ (2).png">
+                <img src="images/grafiki/Portfolio_ (3).png">
+                <img src="images/grafiki/Portfolio_ (4).png">
+                <img src="images/grafiki/Portfolio_ (5).png">
+                <img src="images/grafiki/Portfolio_ (6).png">
+                <img src="images/grafiki/Portfolio_ (7).png">
+                <img src="images/grafiki/Portfolio_ (8).png">
+                <img src="images/grafiki/Portfolio_ (9).png">
+                <img src="images/grafiki/Portfolio_ (10).png">
+                <img src="images/grafiki/Portfolio_ (11).png">
+                <img src="images/grafiki/Portfolio_ (12).png">
+                <img src="images/grafiki/Portfolio_ (13).png">
+                <img src="images/grafiki/Portfolio_ (14).png">
+                <img src="images/grafiki/Portfolio_ (15).png">
+                <img src="images/grafiki/Portfolio_ (16).png">
+                <img src="images/grafiki/Portfolio_ (17).png">
             </div>
-            <div id="projects-carusell">
+        </div>
+
+        <div id="websites" class="hidden">
+            <ul>
+                <li>
+                    <a target="_blank" href="https://ravid.pl" rel="external">
+                        <h1>www.Ravid.pl</h1>
+                        <div class="mockups">
+                            <img src="images/macBook_ravid.png" alt="">
+                            <img src="images/iPhone_ravid.png" alt="">
+                        </div>
+                        <div class="stack-container">
+                            <img src="images/html5.svg" alt="html 5 icon">
+                            <img src="images/css3-alt.svg" alt="css 3 icon">
+                            <img src="images/js.svg" alt="javascript icon">
+                            <img src="images/php.svg" alt="php icon">
+                            <img src="images/wordpress.svg" alt="wordpress icon">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://ravid.pl" rel="external">
+                        <h1>www.Ravid.pl</h1>
+                        <div class="mockups">
+                            <img src="images/macBook_ravid.png" alt="">
+                            <img src="images/iPhone_ravid.png" alt="">
+                        </div>
+                        <div class="stack-container">
+                            <img src="images/html5.svg" alt="html 5 icon">
+                            <img src="images/css3-alt.svg" alt="css 3 icon">
+                            <img src="images/js.svg" alt="javascript icon">
+                            <img src="images/php.svg" alt="php icon">
+                            <img src="images/wordpress.svg" alt="wordpress icon">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- <div id="projects-carusell">
                 <h4>Zajrzyj także do moich projektów do nauki!</h4>
                 <div id="projects-carusell">
                     <a class="projects-arrow" id="projects-arrow--left"><img src="images/angle-left-solid.svg"
@@ -187,7 +312,9 @@
                                 </div>
                             </a>
                         </li>
-                        <!-- <li>
+
+
+                        <li>
                             <a href="qr-code/qr-code.html">
                                 <h1>QR Code</h1>
                                 <img src="images/qr-code-preview.png" alt="">
@@ -196,7 +323,9 @@
                                     <img src="images/css3-alt.svg" alt="css 3 icon">
                                 </div>
                             </a>
-                        </li> -->
+                        </li>
+
+
                         <li>
                             <a href="landing-page/landing-page.html">
                                 <h1>Landing Page</h1>
@@ -221,36 +350,24 @@
                     </ul>
                     <a class="projects-arrow" id="projects-arrow--right"><img src="images/angle-right-solid.svg"
                             alt=""></a>
-                </div>
-        </section>
-
-        <section id="graphics">
-            <h3>Grafiki</h3>
-            <div id="gallery">
-                <img src="images/grafiki/Portfolio_ (1).png">
-                <img src="images/grafiki/Portfolio_ (2).png">
-                <img src="images/grafiki/Portfolio_ (3).png">
-                <img src="images/grafiki/Portfolio_ (4).png">
-                <img src="images/grafiki/Portfolio_ (5).png">
-                <img src="images/grafiki/Portfolio_ (6).png">
-                <img src="images/grafiki/Portfolio_ (7).png">
-                <img src="images/grafiki/Portfolio_ (8).png">
-                <img src="images/grafiki/Portfolio_ (9).png">
-                <img src="images/grafiki/Portfolio_ (10).png">
-                <img src="images/grafiki/Portfolio_ (11).png">
-                <img src="images/grafiki/Portfolio_ (12).png">
-                <img src="images/grafiki/Portfolio_ (13).png">
-                <img src="images/grafiki/Portfolio_ (14).png">
-                <img src="images/grafiki/Portfolio_ (15).png">
-                <img src="images/grafiki/Portfolio_ (16).png">
-                <img src="images/grafiki/Portfolio_ (17).png">
-            </div>
-        </section>
+                </div> -->
+        </div>
 
         <section id="contact">
-            <h3>Kontakt.</h3>
-            <p>Chcesz zadać pytanie? Napisz do mnie na <strong>maila</strong>.</p>
-            <div id="contactcontainer"><a href="mailto:piotrekturek286@gmail.com" target="_blank">Napisz do mnie!</a>
+            <h3>Contact</h3>
+            <div class="">
+                <form action="https://formspree.io/f/xrgwgwdj" method="POST">
+                    <label>
+                        <!-- Your email: -->
+                        <input required type="email" name="email" placeholder="Your adress e-mail">
+                    </label>
+                    <label>
+                        <!-- Your message: -->
+                        <textarea required name="message" placeholder="Your question"></textarea>
+                    </label>
+                    <button class="button button-green form-button" type="submit">Send me an
+                        e-mail!</button>
+                </form>
             </div>
         </section>
     </main>

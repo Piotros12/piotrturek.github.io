@@ -132,3 +132,22 @@ function portfolioChangeClasses() {
 
 console.log(graphicContainer);
 console.log(frontendContainer);
+
+const observer = new IntersectionObserver((entries) => {
+  let delay = 0.2;
+
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add("animated");
+      }, delay * 1000);
+      delay += 0.2;
+    }
+  });
+});
+
+// Pobierz wszystkie elementy <progress> i przekaż je do obserwatora
+const progressElements = document.querySelectorAll(".bars-container progress");
+progressElements.forEach((progressElement) => {
+  observer.observe(progressElement);
+});
