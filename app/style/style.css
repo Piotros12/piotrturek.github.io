@@ -747,3 +747,70 @@ footer a:hover svg,
 }
 
 /* mobile */
+@media (width < 1000px) {
+  :root {
+    --font-base: 13px;
+    --font-big: 1.5rem;
+    --font-huge: 3rem;
+  }
+  section {
+    padding: 106px 20px 32px 20px;
+  }
+  header nav {
+    padding: 0 20px;
+  }
+  #land {
+    max-width: 100%;
+    align-items: end;
+    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: end;
+  }
+  .land-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 270px;
+  }
+  .button {
+    max-width: 80%;
+    margin: 10px 0px;
+  }
+
+  #land .rect {
+    margin-right: -60px;
+  }
+  #about p {
+    margin: 0;
+  }
+  #about .rect {
+    margin-left: -170px;
+  }
+  .arrow-down {
+    display: none;
+  }
+  #skills .rect {
+    margin-right: -100px;
+  }
+  #portfolio h3 {
+    left: 20px;
+  }
+  #websites {
+    min-height: auto;
+  }
+  #contact .form-button {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (width < 380px) {
+  #blob-svg {
+    position: absolute;
+    width: 70% !important;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
