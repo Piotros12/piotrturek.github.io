@@ -810,12 +810,11 @@ footer a:hover svg,
     width: 100%;
     max-width: 100%;
   }
-}
-@media (width < 380px) {
   #blob-svg {
     position: absolute;
     width: 70% !important;
-    top: 40%;
+    max-height: 40%;
+    top: 35%;
     left: 50%;
     transform: translateX(-50%);
   }
