@@ -29,6 +29,8 @@
   /* Font Weight */
   --bold: 800;
   --light: 400;
+
+  color-scheme: normal;
 }
 
 html {
@@ -244,6 +246,7 @@ header nav ol li::marker {
 /* MAIN */
 section {
   min-height: 100dvh;
+  transition: 0.3s;
   padding: 0 40px 32px 40px;
   background-color: var(--white);
   padding-top: calc(5% + 90px);
@@ -385,6 +388,7 @@ progress {
   padding-right: 20px;
   padding-left: 20px;
   margin-bottom: 15px;
+  appearance: none;
 }
 progress::-webkit-progress-bar {
   background-color: var(--light-gray);
