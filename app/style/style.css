@@ -480,6 +480,9 @@ form button {
   -moz-appearance: none;
   appearance: none;
 }
+form button.form-button {
+  color: var(--black);
+}
 
 #portfolio h3 {
   position: absolute;
