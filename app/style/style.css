@@ -245,7 +245,7 @@ header nav ol li::marker {
 
 /* MAIN */
 section {
-  min-height: 100dvh;
+  min-height: 100vh;
   transition: 0.3s;
   padding: 0 40px 32px 40px;
   background-color: var(--white);
