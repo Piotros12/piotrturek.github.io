@@ -420,6 +420,8 @@ main ul li::marker {
 }
 
 form {
+  appearance: none;
+  -webkit-appearance: none;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
