@@ -472,6 +472,14 @@ form .button {
   width: 100% !important;
   cursor: pointer;
 }
+input[type="email"],
+textarea,
+form button {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
 #portfolio h3 {
   position: absolute;
