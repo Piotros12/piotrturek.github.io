@@ -439,6 +439,8 @@ label {
 
 input,
 textarea {
+  -webkit-appearance: none;
+  appearance: none;
   font-family: var(--primary-font);
   padding: 0.75rem 1.25rem;
   font-size: var(--font-base);
@@ -460,6 +462,7 @@ textarea {
 }
 
 button {
+  -webkit-appearance: none;
   appearance: none;
 }
 form .button {
