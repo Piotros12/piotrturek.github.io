@@ -307,7 +307,7 @@ section.black {
 }
 
 .rect:nth-of-type(2n) {
-  animation: rotationa 20s infinite linear;
+  animation: rotationa 30s infinite linear;
 }
 
 @keyframes rotationa {
@@ -567,17 +567,20 @@ form button.form-button {
 #websites,
 #graphics {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
-  min-height: 100dvh;
-  padding: 40px 40px 40px 40px !important;
+  min-height: 100vh;
+  max-height: 5000px;
   background-color: var(--white);
-  padding-top: calc(5% + 90px);
   position: relative;
   overflow: hidden;
   z-index: 5;
+  transition: min-height 1s, box-shadow 1s, max-height 1s;
 }
 
 .hidden {
-  display: none !important;
+  /* display: none !important; */
+  max-height: 0px !important;
+  min-height: 0px !important;
+  box-shadow: 0px 0px 0px 0px white !important;
 }
 /* GRAFIKI*/
 #gallery {
@@ -587,6 +590,7 @@ form button.form-button {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  padding: 40px;
 }
 
 #gallery img {
@@ -655,7 +659,6 @@ footer a:hover svg,
 /* WEBSITES */
 
 #websites {
-  padding-top: 130px !important;
   display: flex;
   height: 100%;
   align-items: center;
@@ -664,6 +667,7 @@ footer a:hover svg,
 }
 
 #websites ul {
+  padding-top: 130px;
   list-style-type: none;
   padding-left: 0;
   height: 100%;
