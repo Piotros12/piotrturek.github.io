@@ -123,6 +123,7 @@ function portfolioChangeClasses() {
     graphicContainer.classList.add("hidden");
     setTimeout(() => {
       frontendContainer.classList.remove("hidden");
+      graphicContainer.classList.add("hidden"); //prevent displaying both sections after pressing both buttons in less than 1second
     }, 1000);
   }
   if (active === "graphic") {
@@ -132,6 +133,7 @@ function portfolioChangeClasses() {
     frontendContainer.classList.add("hidden");
     setTimeout(() => {
       graphicContainer.classList.remove("hidden");
+      frontendContainer.classList.add("hidden"); //prevent displaying both sections after pressing both buttons in less than 1second
     }, 1000);
   }
 }
