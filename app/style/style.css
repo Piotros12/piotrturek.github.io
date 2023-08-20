@@ -568,12 +568,17 @@ form button.form-button {
 #graphics {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
   min-height: 100vh;
-  max-height: 5000px;
   background-color: var(--white);
   position: relative;
   overflow: hidden;
   z-index: 5;
   transition: min-height 1s, box-shadow 1s, max-height 1s;
+}
+#websites {
+  max-height: 100vh;
+}
+#graphics {
+  max-height: 5200px;
 }
 
 .hidden {
@@ -667,7 +672,6 @@ footer a:hover svg,
 }
 
 #websites ul {
-  padding-top: 130px;
   list-style-type: none;
   padding-left: 0;
   height: 100%;

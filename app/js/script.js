@@ -119,14 +119,20 @@ function portfolioChangeClasses() {
   if (active === "frontend") {
     graphic.classList.remove("active");
     frontend.classList.add("active");
+
     graphicContainer.classList.add("hidden");
-    frontendContainer.classList.remove("hidden");
+    setTimeout(() => {
+      frontendContainer.classList.remove("hidden");
+    }, 1000);
   }
   if (active === "graphic") {
     frontend.classList.remove("active");
     graphic.classList.add("active");
+
     frontendContainer.classList.add("hidden");
-    graphicContainer.classList.remove("hidden");
+    setTimeout(() => {
+      graphicContainer.classList.remove("hidden");
+    }, 1000);
   }
 }
 
