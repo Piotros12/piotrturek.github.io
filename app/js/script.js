@@ -105,13 +105,11 @@ graphic.addEventListener("click", portfolioSwitchToGraphic);
 function portfolioSwitchToFrontend() {
   active = "frontend";
   portfolioChangeClasses();
-  console.log(active);
 }
 
 function portfolioSwitchToGraphic() {
   active = "graphic";
   portfolioChangeClasses();
-  console.log(active);
 }
 
 function portfolioChangeClasses() {
