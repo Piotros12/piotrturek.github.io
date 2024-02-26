@@ -53,44 +53,35 @@ function closeHamburger() {
 // }, 50);
 
 // PROJECTS CARRUSEL
-// const projectsList = document.querySelector("#projects-carusell ul");
-// const projectItems = document.querySelectorAll("#projects-carusell ul li");
-// const arrowLeft = document.querySelector("#projects-arrow--left");
-// const arrowRight = document.querySelector("#projects-arrow--right");
-// let itemWidth = projectItems[0].offsetWidth; // szerokość pojedynczego elementu
+const slides = document.querySelectorAll(".slide");
+const previousButton = document.querySelector(".previous");
+const nextButton = document.querySelector(".next");
+let currentSlide = 0;
 
-// window.onresize = function () {
-//   itemWidth = projectItems[0].offsetWidth;
-// };
+previousButton.addEventListener("click", function () {
+  if (currentSlide === 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide--;
+  }
+  updateSlidePosition();
+});
 
-// let currentPosition = 0;
+nextButton.addEventListener("click", function () {
+  if (currentSlide === slides.length - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  updateSlidePosition();
+});
 
-// arrowLeft.addEventListener("click", () => {
-//   if (currentPosition <= 0) {
-//     // przesuwamy na koniec
-//     currentPosition = projectsList.scrollWidth - projectsList.offsetWidth;
-//   } else {
-//     // przesuwamy o szerokość pojedynczego elementu
-//     currentPosition -= itemWidth;
-//   }
-//   projectsList.scrollTo({
-//     left: currentPosition,
-//   });
-// });
-
-// arrowRight.addEventListener("click", () => {
-//   if (currentPosition >= projectsList.scrollWidth - projectsList.offsetWidth) {
-//     // przesuwamy na początek
-//     currentPosition = 0;
-//   } else {
-//     // przesuwamy o szerokość pojedynczego elementu
-//     currentPosition += itemWidth;
-//   }
-//   projectsList.scrollTo({
-//     left: currentPosition,
-//   });
-// });
-
+function updateSlidePosition() {
+  let translationValue = -100 * currentSlide + "%";
+  slides.forEach((slide) => {
+    slide.style.transform = "translateX(" + translationValue + ")";
+  });
+}
 // Portfolio
 const portfolioSection = document.getElementById("portfolio");
 const frontend = document.getElementById("portfolio__left");
